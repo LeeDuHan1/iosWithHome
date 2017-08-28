@@ -1,26 +1,109 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GoWith" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                        <viewControllerLayoutGuide type="top" id="xK8-3O-Klv"/>
+                        <viewControllerLayoutGuide type="bottom" id="Efx-P0-Kku"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="EMf-2f-mfv">
+                                <rect key="frame" x="0.0" y="20" width="375" height="597"/>
+                                <subviews>
+                                    <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hzG-p4-1IU">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="597"/>
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="FBD-gc-dfu" id="gAA-96-uNP"/>
+                                        </connections>
+                                    </webView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="hzG-p4-1IU" secondAttribute="bottom" id="0Na-9e-dJW"/>
+                                    <constraint firstItem="hzG-p4-1IU" firstAttribute="leading" secondItem="EMf-2f-mfv" secondAttribute="leading" id="5CW-Lh-kGf"/>
+                                    <constraint firstItem="hzG-p4-1IU" firstAttribute="top" secondItem="EMf-2f-mfv" secondAttribute="top" id="iH1-IN-iTC"/>
+                                    <constraint firstAttribute="trailing" secondItem="hzG-p4-1IU" secondAttribute="trailing" id="pnn-a2-QMJ"/>
+                                </constraints>
+                            </stackView>
+                            <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NMy-SX-Fly">
+                                <rect key="frame" x="0.0" y="617" width="375" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="III-O1-UBr"/>
+                                </constraints>
+                                <items>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="o4e-Fr-XwQ"/>
+                                    <barButtonItem title="Item" systemItem="rewind" id="ebm-sc-pzW">
+                                        <color key="tintColor" red="0.27302110195159912" green="0.18399500846862793" blue="0.15864846110343933" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="btnGoBack:" destination="BYZ-38-t0r" id="mgq-zd-kZv"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="Q4r-Ga-1v9"/>
+                                    <barButtonItem systemItem="refresh" id="FBD-gc-dfu">
+                                        <color key="tintColor" red="0.27302110200000002" green="0.1839950085" blue="0.1586484611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="btnReload:" destination="BYZ-38-t0r" id="u27-gC-ZH7"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="R6g-qH-gkW"/>
+                                    <barButtonItem title="Item" systemItem="fastForward" id="XH1-ds-08K">
+                                        <color key="tintColor" red="0.27302110200000002" green="0.1839950085" blue="0.1586484611" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="btnGoForward:" destination="BYZ-38-t0r" id="iTy-bq-Vl5"/>
+                                        </connections>
+                                    </barButtonItem>
+                                    <barButtonItem style="plain" systemItem="flexibleSpace" id="PQu-GB-260"/>
+                                </items>
+                            </toolbar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="T1Q-JU-2px">
+                                <rect key="frame" x="177.5" y="323.5" width="20" height="20"/>
+                                <subviews>
+                                    <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Vj8-Zb-sqF">
+                                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="NMy-SX-Fly" secondAttribute="trailing" id="4ro-U3-sjS"/>
+                            <constraint firstAttribute="trailing" secondItem="EMf-2f-mfv" secondAttribute="trailing" id="Bh8-zV-fLe"/>
+                            <constraint firstItem="T1Q-JU-2px" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="DCc-Vb-DAh"/>
+                            <constraint firstItem="NMy-SX-Fly" firstAttribute="top" secondItem="EMf-2f-mfv" secondAttribute="bottom" id="GNN-9r-nM8"/>
+                            <constraint firstItem="NMy-SX-Fly" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="cKb-9w-9tJ"/>
+                            <constraint firstItem="EMf-2f-mfv" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="gWb-6N-pmr"/>
+                            <constraint firstItem="T1Q-JU-2px" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="gzf-ve-52p"/>
+                            <constraint firstItem="Efx-P0-Kku" firstAttribute="top" secondItem="NMy-SX-Fly" secondAttribute="bottom" id="igE-cw-oIY"/>
+                            <constraint firstItem="EMf-2f-mfv" firstAttribute="top" secondItem="xK8-3O-Klv" secondAttribute="bottom" id="r7X-PA-QDv"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="myActivityIndicator" destination="Vj8-Zb-sqF" id="XLs-pa-v86"/>
+                        <outlet property="myWebView" destination="hzG-p4-1IU" id="7g5-UZ-1ht"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="73.5" y="137.5"/>
         </scene>
     </scenes>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
 </document>

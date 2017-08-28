@@ -12,6 +12,8 @@
 		037F0E2C1F1342EE001EBFE8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 037F0E2A1F1342EE001EBFE8 /* Main.storyboard */; };
 		037F0E2E1F1342EF001EBFE8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 037F0E2D1F1342EF001EBFE8 /* Assets.xcassets */; };
 		037F0E311F1342EF001EBFE8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 037F0E2F1F1342EF001EBFE8 /* LaunchScreen.storyboard */; };
+		03BD713F1F14BBEE00785BCA /* APP_loading.png in Resources */ = {isa = PBXBuildFile; fileRef = 03BD713E1F14BBEE00785BCA /* APP_loading.png */; };
+		03CD4C481F1469BD007590DC /* APP_loading.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03CD4C471F1469BD007590DC /* APP_loading.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,9 @@
 		037F0E2D1F1342EF001EBFE8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		037F0E301F1342EF001EBFE8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		037F0E321F1342EF001EBFE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		037F0E391F136446001EBFE8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		03BD713E1F14BBEE00785BCA /* APP_loading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = APP_loading.png; sourceTree = "<group>"; };
+		03CD4C471F1469BD007590DC /* APP_loading.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = APP_loading.storyboard; path = Assets.xcassets/APP_loading.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,8 +63,10 @@
 				037F0E281F1342EE001EBFE8 /* ViewController.swift */,
 				037F0E2A1F1342EE001EBFE8 /* Main.storyboard */,
 				037F0E2D1F1342EF001EBFE8 /* Assets.xcassets */,
+				03CD4C471F1469BD007590DC /* APP_loading.storyboard */,
 				037F0E2F1F1342EF001EBFE8 /* LaunchScreen.storyboard */,
 				037F0E321F1342EF001EBFE8 /* Info.plist */,
+				03BD713E1F14BBEE00785BCA /* APP_loading.png */,
 			);
 			path = GoWith;
 			sourceTree = "<group>";
@@ -96,6 +103,7 @@
 				TargetAttributes = {
 					037F0E221F1342EE001EBFE8 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 4UP9H99AUM;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -126,6 +134,8 @@
 				037F0E311F1342EF001EBFE8 /* LaunchScreen.storyboard in Resources */,
 				037F0E2E1F1342EF001EBFE8 /* Assets.xcassets in Resources */,
 				037F0E2C1F1342EE001EBFE8 /* Main.storyboard in Resources */,
+				03BD713F1F14BBEE00785BCA /* APP_loading.png in Resources */,
+				03CD4C481F1469BD007590DC /* APP_loading.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -148,6 +158,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				037F0E2B1F1342EE001EBFE8 /* Base */,
+				037F0E391F136446001EBFE8 /* en */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -204,7 +215,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -249,7 +260,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
@@ -262,11 +273,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4UP9H99AUM;
 				INFOPLIST_FILE = GoWith/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.withhome.GoWith;
+				PRODUCT_BUNDLE_IDENTIFIER = com.with.GoWith;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -274,11 +288,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 4UP9H99AUM;
 				INFOPLIST_FILE = GoWith/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.withhome.GoWith;
+				PRODUCT_BUNDLE_IDENTIFIER = com.with.GoWith;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -301,6 +318,7 @@
 				037F0E371F1342EF001EBFE8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
